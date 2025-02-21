@@ -20,6 +20,5 @@ app.use('/product', productRouter)
 app.use('/applications', applicationRouter)
 app.use('/reservation', reservationRouter)
 
-app.listen(5500, () => {
-    console.log("backend running");
-})
+const PORT = process.env.PORT || 5500;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
