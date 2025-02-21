@@ -20,5 +20,9 @@ app.use('/product', productRouter)
 app.use('/applications', applicationRouter)
 app.use('/reservation', reservationRouter)
 
+app.get('/', (req, res) => {
+    res.json({ message: 'Welcome' });
+  });
+
 const PORT = process.env.PORT || 5500;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
